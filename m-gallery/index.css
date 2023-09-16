@@ -14,6 +14,14 @@
   --border-radius-300: 6px;
 }
 
+html {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: none;
+}
+
 /* Global Reset */
 button {
   margin: 0;
