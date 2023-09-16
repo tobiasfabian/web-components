@@ -33,7 +33,6 @@ class MGallery extends HTMLElement {
 
     const language = this.closest('[lang]')?.lang;
     const translations = this.translations[language] ?? this.translations.en;
-    console.log(icons);
 
     const imagesListElement = this.querySelector(':scope > ul');
 
