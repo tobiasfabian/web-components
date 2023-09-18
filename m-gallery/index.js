@@ -21,10 +21,12 @@ class MGallery extends HTMLElement {
     en: {
       previousImage: 'Previous image',
       nextImage: 'Next image',
+      navigationLabel: 'Gallery controls',
     },
     de: {
       previousImage: 'Vorheriges Bild',
       nextImage: 'Nächstes Bild',
+      navigationLabel: 'Galerie-Steuerung',
     },
   };
 
@@ -43,7 +45,7 @@ class MGallery extends HTMLElement {
         <div class="m-gallery__images">
           ${imagesListElement.outerHTML}
         </div>
-        <nav class="m-gallery__navigation">
+        <nav class="m-gallery__navigation" aria-label="${translations.navigationLabel}">
           <div class="a-pagination" data-kind="dots">
             <ul>
               ${Array.from({ length: this.imagesCount }, (_, index) => index + 1).map((index) => `<li><button data-index="${index}" data-action="show-image" aria-label="${index}"></button></li>`).join('')}
@@ -217,6 +219,7 @@ class MGallery extends HTMLElement {
     paginationButtonElements.forEach((paginationButtonElement) => {
       const index = parseInt(paginationButtonElement.dataset.index, 10);
       paginationButtonElement.toggleAttribute('aria-pressed', currentImage === index);
+      paginationButtonElement.toggleAttribute('aria-current', currentImage === index);
     });
     buttonPreviousImageElement.toggleAttribute('disabled', this.currentImage === 1);
     buttonNextImageElement.toggleAttribute('disabled', this.currentImage === this.imagesCount);
