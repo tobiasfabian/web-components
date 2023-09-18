@@ -20,7 +20,7 @@ class MGallery extends HTMLElement {
   translations = {
     en: {
       previousImage: 'Previous image',
-      nextImage: 'Previous image',
+      nextImage: 'Next image',
     },
     de: {
       previousImage: 'Vorheriges Bild',
