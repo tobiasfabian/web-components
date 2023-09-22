@@ -1,0 +1,30 @@
+@import url('../foundation/variables.css');
+@import url('../foundation/reset.css');
+
+a-zoom-picture {
+  max-width: 500px;
+	display: flex;
+	justify-items: center;
+	align-items: center;
+	overflow: hidden;
+	background-color: var(--color-background-secondary-inverse);
+
+  > img {
+    max-inline-size: 100%;
+  }
+
+	&[role="button"] {
+		cursor: zoom-in;
+
+		&[zoomed] {
+			cursor: zoom-out;
+		}
+	}
+
+	&[zoomed] {
+		> img {
+			pointer-events: none;
+			user-select: none;
+		}
+	}
+}

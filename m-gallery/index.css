@@ -1,43 +1,14 @@
+@import url('../foundation/variables.css');
+@import url('../foundation/reset.css');
+
 :root {
   --max-width-content: 800px;
-  --color-white: white;
-  --color-content-primary: black;
-  --color-content-primary-inverse: white;
-  --color-background-primary: white;
-  --color-background-primary-inverse: black;
-  --color-background-secondary-inverse: gray;
   --gap-200: 10px;
   --gap-300: 20px;
   --gap-400: 30px;
   --gap-500: 40px;
   --gap-600: 60px;
-  --border-radius-300: 6px;
 }
-
-html {
-  font-family: system-ui, sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: none;
-}
-
-/* Global Reset */
-button {
-  margin: 0;
-  border-radius: 0;
-  padding: 0;
-  font: inherit;
-  line-height: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-button {
-  text-align: start;
-  border: 0;
-  cursor: pointer;
-}
-
 
 m-gallery {
   max-width: var(--max-width-content);

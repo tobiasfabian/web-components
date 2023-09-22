@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>a-zoom-picture example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="module" src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>Zoom Picture Example</h1>
+    <p>Image zooms on <code>mouseenter</code> or on <code>click</code>.</p>
+
+    <h2>Hover</h2>
+    <a-zoom-picture max-zoom="2000">
+      <img src="../example-data/leo-df2PU_7IOdc-unsplash.jpg" width="2000" height="1333" alt="Landscape">
+    </a-zoom-picture>
+
+    <h2>Click</h2>
+    <a-zoom-picture max-zoom="1500" role="button" aria-label="Zoom image" tabindex="0">
+      <img src="../example-data/leo-df2PU_7IOdc-unsplash.jpg" width="2000" height="1333" alt="Landscape">
+    </a-zoom-picture>
+  </body>
+</html>
